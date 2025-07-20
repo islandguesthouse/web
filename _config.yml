@@ -1,0 +1,17 @@
+# _config.yml
+
+# Site settings
+title: 아일랜드 게스트하우스
+description: >- # 검색 결과에 보일 사이트 설명입니다.
+  제주도에 위치한 아늑하고 편안한 아일랜드 게스트하우스입니다.
+
+# Build settings
+baseurl: "" # 👈 사용자 사이트(nujabes.github.io)는 반드시 비워두어야 합니다.
+url: "https://nujabes.github.io" # 👈 본인의 최종 사이트 주소입니다.
+
+# Exclude from processing
+# 최종 사이트에 포함되지 않을 파일들입니다.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,228 @@
+/* 기본 스타일 및 폰트 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+   	width: 100%;
+    height:100%;
+}
+body{
+		display:block;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    /*background-color: #FADF63; /* 페이지 기본 배경색 */
+    background-image: url('/assets/images/bg_pattern.png'); 
+
+ 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1,
+h2,
+h3{margin-bottom: 0.8em}
+
+
+
+.page-background {
+    background-image: url('/assets/images/bg_top.png'); 
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    /*background: #cccccc;*/
+    min-height: 100vh;
+    padding: 20px;
+    /*height:100%;*/
+    margin-bottom: 20px;
+
+}
+
+/* 상단 언어 선택 바 */
+.top-bar {
+    width: 100%;
+    background-color: #fbeca2;
+    padding: 5px 20px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.lang-switch a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin: 0 5px;
+}
+
+.lang-switch a.active {
+    font-weight: 700;
+    color: #000;
+}
+
+/* 메인 콘텐츠 컨테이너 (폴라로이드 프레임과 집게 포함) */
+.main-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 40px auto 40px; /* 상단 바 높이만큼 여백 추가 */
+}
+
+/* 빨래집게 스타일 */
+.clothespins {
+    position: absolute;
+    width: 100%;
+    top: -25px;
+    left: 0;
+    z-index: 10;
+}
+
+.pin {
+    position: absolute;
+    width: 60px;
+    height: auto;
+}
+
+.pin-left {
+    left: 20%;
+    transform: rotate(-15deg);
+}
+
+.pin-right {
+    right: 20%;
+    transform: rotate(15deg);
+}
+
+/* 폴라로이드 사진 형태의 프레임 */
+.photo-frame {
+    display: flex;
+		position: relative;
+}
+
+/* 왼쪽 사이드바 (로고, 메뉴) */
+.sidebar {
+    flex: 0 0 240px; /* 고정 너비 */
+    padding-right: 25px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 173px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* 내비게이션 메뉴 */
+.menu {
+    margin-top: 30px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    color: #444;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    cursor: pointer;	
+}
+
+.menu li a::before {
+    content: '〉';
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.menu li a:hover {
+    background-color: #f5f5f5;
+}
+.menu li a span{
+	font-size: 0.7em;
+	margin: 0 0 2px 10px;
+	display: inline-block;
+	letter-spacing: 2px;
+}
+
+/* 오른쪽 메인 콘텐츠 영역 */
+.content {
+    flex: 1; /* 나머지 공간 모두 차지 */
+    border-left: 1px solid #f0f0f0;
+    padding-left: 30px;
+   position: relative; /* 추가 */
+
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.content:before {
+    content: '';
+    display: block; /* 배경 이미지를 표시하기 위해 block 설정 */
+    /*position: fixed; /* 페이지 최상단에 고정 */*/
+    position: absolute; /* 페이지 최상단에 고정 */
+    top: -50px;
+    left: 50%;
+    /* width: 100%; */ /* 페이지 전체 너비 */
+    height: 74px; /* 이미지 비율에 맞게 높이 자동 조정 */
+    z-index: 10; /* 다른 콘텐츠보다 위에 표시 (header의 z-index보다 높게) */
+    background-image: url('/assets/images/bg_picker.png'); /* 투명 이미지 경로 설정 */
+    background-repeat: repeat-x; /* 가로로 반복 */
+    background-position: top center; /* 상단 중앙에 배치 */
+    opacity: 1; /* 필요에 따라 투명도 조절 */
+    position: absolute;
+    width: 251px;
+    margin-left: -125px;
+}
+	
+
+.content figure {
+    margin: 0;
+}
+
+.content img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    /*border: 1px solid #eee;*/
+    margin: 0 auto 30px;
+}
+
+.content figcaption {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.content p{
+	margin-bottom:1em;
+}
+.content h3+div{margin:40px 0 50px;}
